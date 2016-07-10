@@ -1,23 +1,44 @@
-func downloadImage(atURL url: String) -> (Bool, String) {
-    // TODO: Download image
-    // if no error, return true
-    // otherwise, get error string and return false
-    let error = "Image no longer exists"
-    return (false, error)
+//func downloadImage(atURL url: String) -> (Bool, String) {
+//    // TODO: Download image
+//    // if no error, return true
+//    // otherwise, get error string and return false
+//    let error = "Image no longer exists"
+//    return (false, error)
+//}
+//
+//let result = downloadImage(atURL: "http://example.com/image.png")
+//result.0
+//result.1
+//print("Success? \(result.0)")
+//print("Message: \(result.1)")
+//
+//let person = (name: "Jim", age: 30)
+//person.age
+//person.name
+//print("\(person.name)'s age is \(person.age)")
+//
+//var person2 = (name: "Jim", age: 30)
+//print("\(person2.name)'s age is \(person2.age)")
+//person2.age = 32
+//print("\(person2.name)'s age is \(person2.age)")
+
+// code was already provided, playing around w/ my own thing
+func findPersonOlderThan(age: Int, _:String) -> (Int,Bool) {
+    
+    var adulting = true
+    
+    if age > 18 && age < 30 {
+        adulting = true
+        
+        return (age, adulting)
+    } else {
+        adulting = false
+        return (age, adulting)
+    }
 }
 
-let result = downloadImage(atURL: "http://example.com/image.png")
-result.0
+let result = findPersonOlderThan(32,  "Jane")
+findPersonOlderThan(26,  "Luna")
+
 result.1
-print("Success? \(result.0)")
-print("Message: \(result.1)")
-
-let person = (name: "Jim", age: 30)
-person.age
-person.name
-print("\(person.name)'s age is \(person.age)")
-
-var person2 = (name: "Jim", age: 30)
-print("\(person2.name)'s age is \(person2.age)")
-person2.age = 32
-print("\(person2.name)'s age is \(person2.age)")
+result.0
